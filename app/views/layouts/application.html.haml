@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %meta{:content =>        "text/html; charset=UTF-8", "http-equive" => "Content-Type"}/
+    %title Shoff Accounting
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = csrf_meta_tags
+    -# = favicon_link_tag favicon goes here
+  %body
+    .container
+      -# Nav Row
+      .row
+        = render :partial => 'layouts/navbar'
+      -# Yield Row
+      = yield

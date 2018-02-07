@@ -1,0 +1,24 @@
+%nav.navbar.navbar-default
+	.container-fluid
+		.navbar-header
+			%button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+				%span.sr-only Toggle navigation
+				%span.icon-bar
+			%span-navbar-brand
+				%i.fa.fa-calculator
+				= link_to "Shoff Accounting", root_path
+			#navbar-collapse.collapse.navbar-collapse
+				%ul.nav.navbar-nav
+					%li.nav-item
+						= link_to "Home", root_path, :class => "nav-link"
+				- if user_signed_in?
+					%li.nav-item
+						= link_to "View Profile", current_user, :class => "nav-link"
+					%li.nav-item
+					 	= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => "nav-link"
+				- else
+					%li.nav-item
+						= link_to "Client Sign In", new_user_session_path, :class => 'navbar-link'}
+					
+
+			
