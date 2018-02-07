@@ -33,6 +33,8 @@ gem 'figaro', '~> 1.1'
 gem 'haml'
 # Use Pundit for authorization
 gem 'pundit'
+# Use bcrypt for encryption
+gem 'bcrypt'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
