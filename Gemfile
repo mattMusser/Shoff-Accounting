@@ -36,6 +36,9 @@ gem 'pundit'
 # Use bcrypt for encryption
 gem 'bcrypt'
 
+# Use google-drive-ruby to access Google Sheets
+gem 'google_drive' 
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
