@@ -12,9 +12,32 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 
  //Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 
+.navbar a {
+	color: #428bca;
+}
+
+.navbar a:hover {
+	color: rgb(7, 7, 7);
+}
+
+.navbar .userStatus {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.navbar .userDropDown a {
+	color: #333;
+}
+
+.navbar userDropDown a:hover {
+	color: #333;
+	text-decoration: underline;
+}

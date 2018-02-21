@@ -18,6 +18,8 @@ gem 'turbolinks', '~> 5'
 gem 'sass-rails', '~> 5.0'
 # Use Bootstrap 3
 gem 'bootstrap-sass', '~> 3.3'
+# Bootstrap Javascript depends on jQuery
+gem 'jquery-rails', '~> 4.3'
 # Use Sprockets Rails
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 # Used to access font-awesome fonts
