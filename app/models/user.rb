@@ -2,4 +2,28 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :lockable, :validatable,
          :timeoutable
+
+  attr_accessor :login
+  
+  validates :client_name, presence: :true, uniqueness: {case_sensitive: false }
+# Only allow letter, number, underscore, and punctuation
+  validates_format_of :client_name, with: /^[a-zA-Z0-9_\.]*$/, :multiline => true
+  validate :validate_client_name
+
+  def self.find_for_database_authentication(warden_conditions)
+    conditions = warden_conditions.dup
+    if login = conditions.delete(:login)
+      where(conditions.to_hash).where(["lower(client_name) = :value", { :value => login.downcase }]).first
+    elsif conditions.has_key?(:client_name)
+      where(conditions.to_hash).first
+    end
+  end
+
+  private
+
+  def validate_client_name
+    if User.where(email: client_name).exists?
+      errors.add(:client_name, :invalid)
+    end
+  end
 end
