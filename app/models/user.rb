@@ -7,7 +7,7 @@ class User < ApplicationRecord
   
   validates :client_name, presence: :true, uniqueness: {case_sensitive: false }
 # Only allow letter, number, underscore, and punctuation
-  validates_format_of :client_name, with: /^[a-zA-Z0-9_\.]*$/, :multiline => true
+  validates_format_of :client_name, with: /^[a-zA-Z0-9_ \.]*$/, :multiline => true
   validate :validate_client_name
 
   def self.find_for_database_authentication(warden_conditions)
