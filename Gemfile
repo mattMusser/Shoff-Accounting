@@ -37,8 +37,6 @@ gem 'haml'
 gem 'pundit'
 # Use bcrypt for encryption
 gem 'bcrypt'
-# Use CanCanCan for authorization
-gem 'cancancan', '~> 2.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
