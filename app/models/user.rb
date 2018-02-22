@@ -3,12 +3,14 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :lockable, :validatable,
          :timeoutable
 
+  after_initialize { self.role ||= :standard }  
   attr_accessor :login
   
   validates :client_name, presence: :true, uniqueness: {case_sensitive: false }
 # Only allow letter, number, underscore, and punctuation
   validates_format_of :client_name, with: /^[a-zA-Z0-9_ \.]*$/, :multiline => true
   validate :validate_client_name
+  enum role: [:client, :admin]
 
   def self.find_for_database_authentication(warden_conditions)
     conditions = warden_conditions.dup
