@@ -22,6 +22,7 @@ client_four.save!
 # Create Admin User
 admin = User.find_or_initialize_by(client_name: 'admin', email: Faker::Internet.safe_email) do |user|
 	user.password = 'password'
+	user.role =   'admin'
 end
 admin.save!
 

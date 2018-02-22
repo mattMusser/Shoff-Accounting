@@ -3,7 +3,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :lockable, :validatable,
          :timeoutable
 
-  after_initialize { self.role ||= :standard }  
+  after_initialize { self.role ||= :client }  
   attr_accessor :login
   
   validates :client_name, presence: :true, uniqueness: {case_sensitive: false }
