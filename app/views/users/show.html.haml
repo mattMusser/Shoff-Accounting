@@ -19,4 +19,4 @@
 					-if current_user.admin?
 						- @users.each do |client|
 							%br
-							\#{link_to client.client_name, user_path(client)}
+							\#{link_to client.client_name, user_path(client.id)}
