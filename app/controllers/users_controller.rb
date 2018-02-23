@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
   def show
     @users = User.all
+    @client = User.find(params[:id])
   end
 
   def update

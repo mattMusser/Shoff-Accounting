@@ -6,5 +6,9 @@ Rails.application.routes.draw do
   end
 
   resources :users
+  
+  get 'users', to: "users#index", as: "clients"
+  get 'users/:id', to: "users#show", as: "client"
+
   root "welcome#faq"
 end

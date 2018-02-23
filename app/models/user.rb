@@ -6,6 +6,8 @@ class User < ApplicationRecord
   after_initialize { self.role ||= :client }  
   attr_accessor :login
   
+  default_scope { order('client_name ASC') }
+
   validates :client_name, presence: :true, uniqueness: {case_sensitive: false }
 # Only allow letter, number, underscore, and punctuation
   validates_format_of :client_name, with: /^[a-zA-Z0-9_ \.]*$/, :multiline => true
