@@ -1,0 +1,22 @@
+%h1{:align => "center"}
+	= current_user.client_name
+%br
+.container
+	.row
+		-if current_user.admin?
+			%h2
+				Your Clients
+			%br
+		-else
+			%h2{:align => "center"}
+				Your Financial Info
+			%br
+.container
+	.row
+		.col-md-8
+			.media
+				.media-body
+					-if current_user.admin?
+						- @users.each do |client|
+							%br
+							\#{link_to client.client_name, user_path(client.id)}
