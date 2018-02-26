@@ -26,7 +26,8 @@ admin = User.find_or_initialize_by(client_name: 'admin', email: Faker::Internet.
 end
 admin.save!
 
-admin_user = AdminUser.create!(email: 'admin@example.com',
+admin_user = AdminUser.create!(client_name: 'admin',
+									email: 'admin@example.com',
 									password: 'password',
 									password_confirmation: 'password') if Rails.env.development?
 admin_user.save!
