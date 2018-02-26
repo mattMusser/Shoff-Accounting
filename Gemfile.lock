@@ -248,7 +248,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activeadmin
+  activeadmin (~> 1.2)
   bcrypt
   bootstrap-sass (~> 3.3)
   byebug

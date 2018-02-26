@@ -37,8 +37,8 @@ gem 'haml'
 gem 'pundit'
 # Use bcrypt for encryption
 gem 'bcrypt'
-
-gem 'activeadmin'
+# Use activeadmin for admin framework
+gem 'activeadmin', '~>1.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
