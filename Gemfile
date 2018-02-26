@@ -24,6 +24,7 @@ gem 'jquery-rails', '~> 4.3'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 # Used to access font-awesome fonts
 gem 'font-awesome-rails'
+gem 'active_admin_theme'
 
 # Use Devise for Authentication
 gem 'devise', '~> 4.3'
