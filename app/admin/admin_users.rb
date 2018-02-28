@@ -3,7 +3,6 @@ ActiveAdmin.register AdminUser do
 
   index do
     selectable_column
-    id_column
     column :client_name
     column :email
     column :current_sign_in_at

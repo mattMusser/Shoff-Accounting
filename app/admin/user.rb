@@ -1,16 +1,8 @@
 ActiveAdmin.register User do
-	
-	form do |f|
-		f.inputs "User Details" do
-			f.input :client_name
-			f.input :email
-			f.input :password
-			f.input :password_confirmation
-		end
-		f.actions
-	end
+	permit_params :client_name, :email, :password, :password_confirmation
 
 	index do
+		selectable_column
 		column :client_name
 		column :email
 		column :role
@@ -24,6 +16,13 @@ ActiveAdmin.register User do
 	filter :created_at
 	filter :role
 
-
-
+	form do |f|
+		f.inputs "User Details" do
+			f.input :client_name
+			f.input :email
+			f.input :password
+			f.input :password_confirmation
+		end
+		f.actions
+	end
 end

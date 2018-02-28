@@ -3,7 +3,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :lockable, :validatable,
          :timeoutable
 
-  belongs_to :registration
   after_initialize { self.role ||= :client }  
   attr_accessor :login
   
@@ -28,7 +27,7 @@ class User < ApplicationRecord
 
   def validate_client_name
     if User.where(email: client_name).exists?
-      errors.add(:client_name, :invalid)
+      flash[:error] = "Client Exists"
     end
   end
 end
