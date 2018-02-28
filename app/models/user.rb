@@ -3,6 +3,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :lockable, :validatable,
          :timeoutable
 
+  belongs_to :registration
   after_initialize { self.role ||= :client }  
   attr_accessor :login
   
