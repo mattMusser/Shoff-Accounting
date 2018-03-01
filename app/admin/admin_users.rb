@@ -1,4 +1,5 @@
 ActiveAdmin.register AdminUser do
+  menu false
   permit_params :client_name, :email, :password, :password_confirmation
 
   index do

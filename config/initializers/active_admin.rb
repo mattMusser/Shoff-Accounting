@@ -86,7 +86,7 @@ ActiveAdmin.setup do |config|
   #
   # This setting changes the method which Active Admin calls
   # (within the application controller) to return the currently logged in user.
-  config.current_user_method = :current_admin_user
+  config.current_user_method = :current_user
 
   # == Logging Out
   #
@@ -98,13 +98,13 @@ ActiveAdmin.setup do |config|
   # will call the method to return the path.
   #
   # Default:
-  config.logout_link_path = :destroy_admin_user_session_path
+  config.logout_link_path = :destroy_user_session_path
 
   # This setting changes the http method used when rendering the
   # link. For example :get, :delete, :put, etc..
   #
   # Default:
-  # config.logout_link_method = :get
+  config.logout_link_method = :delete
 
   # == Root
   #
@@ -113,6 +113,7 @@ ActiveAdmin.setup do |config|
   #
   # Default:
   # config.root_to = 'dashboard#index'
+  config.root_to = 'users#index'
 
   # == Admin Comments
   #
@@ -282,7 +283,7 @@ ActiveAdmin.setup do |config|
   # By default, the footer shows the current Active Admin version. You can
   # override the content of the footer here.
   #
-  # config.footer = 'my custom footer text'
+  config.footer = 'Copyright \u00A9 2018 Matt Musser'
 
   # == Sorting
   #
