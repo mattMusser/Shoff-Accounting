@@ -1,0 +1,2 @@
+class GoogleSheetLinkController < ApplicationController
+end
