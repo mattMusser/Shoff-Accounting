@@ -26,11 +26,11 @@ admin = User.find_or_initialize_by(client_name: 'admin', email: Faker::Internet.
 end
 admin.save!
 
-admin_user = AdminUser.create!(client_name: 'admin',
-									email: 'admin@example.com',
-									password: 'password',
-									password_confirmation: 'password') if Rails.env.development?
-admin_user.save!
+#admin_user = AdminUser.create!(client_name: 'admin',
+#									email: 'admin@example.com',
+#									password: 'password',
+#									password_confirmation: 'password') if Rails.env.development?
+#admin_user.save!
 
 # Create Standard User
 standard = User.find_or_initialize_by(client_name: 'standard', email: Faker::Internet.safe_email) do |user|
@@ -42,4 +42,4 @@ users = User.all
 puts "Seeding Finished"
 puts "-.-.-.-.-.-.-.-.-"
 puts "#{User.count} total users"
-puts "#{AdminUser.count} total admins"
+#puts "#{AdminUser.count} total admins"
