@@ -14,6 +14,8 @@
 						= link_to "Latest Financial Info", current_user, class: "nav-link" if current_user.client?
 						= link_to "Client Management", current_user, class: "nav-link" if current_user.admin?
 					.navbar-text
+						= link_to "FAQ", 'welcome#faq', class: "nav-link" if current_user.client?
+					.navbar-text
 						= link_to "Sign Out", logout_path, :method => :delete, class: "nav-link"
 				- else
 					.navbar-text
