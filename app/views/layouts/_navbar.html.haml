@@ -9,8 +9,6 @@
 				= link_to "Shoff Accounting", current_user
 			#navbar-collapse.collapse.navbar-collapse
 				%ul.nav.navbar-nav
-					%li.nav-item
-						= link_to "Home", current_user, class: "nav-link"
 				-if user_signed_in?
 					.navbar-text
 						= link_to "Latest Financial Info", current_user, class: "nav-link" if current_user.client?

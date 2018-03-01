@@ -20,12 +20,17 @@
 @import "bootstrap";
 @import "font-awesome";
 
+.navbar {
+	background-color: #23282F;
+}
+
 .navbar a {
 	color: #428bca;
+	text-decoration-line: none;
 }
 
 .navbar a:hover {
-	color: rgb(7, 7, 7);
+	color: #F7F9FB;
 }
 
 .navbar .userStatus {
@@ -39,5 +44,12 @@
 
 .navbar userDropDown a:hover {
 	color: #333;
-	text-decoration: underline;
+	text-decoration: none;
 }
+
+.navbar .navbar-link {
+	color: #428bca;
+}
+
+
+
