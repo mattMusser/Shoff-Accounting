@@ -1,21 +1,21 @@
 # Create Clients
 client_one = User.find_or_initialize_by(client_name: 'Creative Photography', email: Faker::Internet.safe_email) do |client|
-	client.password = Faker::Internet.password
+	client.password = 'password'
 end
 client_one.save!
 
 client_two = User.find_or_initialize_by(client_name: 'Photography Company', email: Faker::Internet.safe_email) do |client|
-	client.password = Faker::Internet.password
+	client.password = 'password'
 end
 client_two.save!
 
 client_three = User.find_or_initialize_by(client_name: 'Web Photos', email: Faker::Internet.safe_email) do |client|
-	client.password = Faker::Internet.password
+	client.password = 'password'
 end
 client_three.save!
 
 client_four = User.find_or_initialize_by(client_name: 'Samson Creative', email: Faker::Internet.safe_email) do |client|
-	client.password = Faker::Internet.password
+	client.password = 'password'
 end
 client_four.save!
 
@@ -26,17 +26,6 @@ admin = User.find_or_initialize_by(client_name: 'admin', email: Faker::Internet.
 end
 admin.save!
 
-#admin_user = AdminUser.create!(client_name: 'admin',
-#									email: 'admin@example.com',
-#									password: 'password',
-#									password_confirmation: 'password') if Rails.env.development?
-#admin_user.save!
-
-# Create Standard User
-standard = User.find_or_initialize_by(client_name: 'standard', email: Faker::Internet.safe_email) do |user|
-	user.password = 'password'
-end
-standard.save!
 users = User.all
 
 puts "Seeding Finished"
