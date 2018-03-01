@@ -1,0 +1,2 @@
+class GoogleSheetLink < ApplicationRecord
+end
