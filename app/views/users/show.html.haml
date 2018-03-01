@@ -16,7 +16,4 @@
 		.col-md-8
 			.media
 				.media-body
-					-if current_user.admin?
-						- @users.each do |client|
-							%br
-							\#{link_to client.client_name, user_path(client.id)}
+

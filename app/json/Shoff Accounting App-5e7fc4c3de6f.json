@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "shoff-accounting-app",
+  "private_key_id": "5e7fc4c3de6f04b50d50bb88d265cd47ddd9fff4",
+  "private_key": ENV["GOOGLE_PRIVATE_KEY"],
+  "client_email": "shoff-accounting@shoff-accounting-app.iam.gserviceaccount.com",
+  "client_id": "105695794806119861238",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/shoff-accounting%40shoff-accounting-app.iam.gserviceaccount.com"
+}

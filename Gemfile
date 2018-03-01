@@ -41,6 +41,9 @@ gem 'bcrypt'
 # Use activeadmin for admin framework
 gem 'activeadmin', '~>1.2'
 
+# Use google drive to access google sheets
+gem 'google_drive'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
