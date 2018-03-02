@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20180302000121) do
     t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "client_name"
-    t.index ["client_name"], name: "index_google_sheet_links_on_client_name"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_google_sheet_links_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
