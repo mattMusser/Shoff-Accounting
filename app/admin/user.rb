@@ -1,5 +1,5 @@
 ActiveAdmin.register User do
-	permit_params :client_name, :email, :password, :password_confirmation
+	permit_params :client_name, :email, :password, :password_confirmation, :google_sheet_links
 
 	index do
 		selectable_column
@@ -7,6 +7,7 @@ ActiveAdmin.register User do
 		column :email
 		column :role
 		column :created_at
+		column :google_sheet_links
 		
 		actions
 	end
