@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :google_sheet_links
+  has_many :links
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :lockable, :validatable,

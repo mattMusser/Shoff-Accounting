@@ -1,15 +1,15 @@
-class GoogleSheetLinkController < ApplicationController
+class LinkController < ApplicationController
   def show
-    @sheet_link = GoogleSheetLink.find(params[:id])
+    @sheet_link = Link.find(params[:id])
     redirect_to @sheet_link.url
   end
 
   def new
-    @sheet_link = GoogleSheetLink.new
+    @sheet_link = Link.new
   end
 
   def create
-    @sheet_link = GoogleSheetLink.find(params[:id])
+    @sheet_link = Link.find(params[:id])
     @sheet = @sheet.build(link_params)
 
     if @sheet_link.save
@@ -22,11 +22,11 @@ class GoogleSheetLinkController < ApplicationController
   end
 
   def edit
-    @sheet_link = GoogleSheetLink.find(params[:id])
+    @sheet_link = Link.find(params[:id])
   end
 
   def update
-    @sheet_link = GoogleSheetLink.find(params[:id])
+    @sheet_link = Link.find(params[:id])
 
     @sheet_link.assign_attributes(link_params)
     if @sheet_link.save
@@ -39,7 +39,7 @@ class GoogleSheetLinkController < ApplicationController
   end
 
   def destroy
-    @sheet_link = GoogleSheetLink.find(params[:id])
+    @sheet_link = Link.find(params[:id])
 
     if @sheet_link.destroy
       flash[:notice] = "\"#{@sheel_link.url}\" was deleted successfully."
@@ -52,6 +52,6 @@ class GoogleSheetLinkController < ApplicationController
 
   private
   def link_params
-    params.require(:google_sheet_link).permit(:url)
+    params.require(:_link).permit(:url)
   end
 end

@@ -28,7 +28,14 @@ admin.save!
 
 users = User.all
 
+# Create Google Sheet Links
+	link = Link.create!(
+		url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQBGkvCVm8armqckARgkdgRPC7BT49eFcnIhwrz6zYVcIWmDC7QpfpRTfjaRdpTE5DYRnOdFhmQtAPT/pubhtml",
+		user: users.sample
+	)
+links = Link.all
+
 puts "Seeding Finished"
 puts "-.-.-.-.-.-.-.-.-"
 puts "#{User.count} total users"
-#puts "#{AdminUser.count} total admins"
+puts "#{Link.count} total links"
