@@ -6,13 +6,12 @@
 				%span.icon-bar
 			%span.navbar-brand
 				%i.fa.fa-calculator
-				= link_to "Shoff Accounting", current_user
+				= link_to "Shoff Accounting Client App", current_user
 			#navbar-collapse.collapse.navbar-collapse
 				%ul.nav.navbar-nav
 				-if user_signed_in?
 					.navbar-text
 						= link_to "Latest Financial Info", current_user, class: "nav-link" if current_user.client?
-						= link_to "Client Management", current_user, class: "nav-link" if current_user.admin?
 					.navbar-text
 						= link_to "Sign Out", logout_path, :method => :delete, class: "nav-link"
 				- else
