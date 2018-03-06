@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180306161151) do
+ActiveRecord::Schema.define(version: 20180306210233) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -33,10 +33,14 @@ ActiveRecord::Schema.define(version: 20180306161151) do
 
   create_table "links", force: :cascade do |t|
     t.string "url"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
+    t.string "client_name"
+    t.integer "users_id"
+    t.index ["client_name"], name: "index_links_on_client_name"
     t.index ["user_id"], name: "index_links_on_user_id"
+    t.index ["users_id"], name: "index_links_on_users_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -52,8 +56,10 @@ ActiveRecord::Schema.define(version: 20180306161151) do
     t.datetime "updated_at", null: false
     t.string "client_name"
     t.integer "role"
+    t.integer "links_id"
     t.index ["client_name"], name: "index_users_on_client_name", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["links_id"], name: "index_users_on_links_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end

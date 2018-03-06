@@ -4,7 +4,8 @@ ActiveAdmin.register Link do
 	index do
 		selectable_column
 		column :client_name
-		column :link
+		column :url
+		column :created_at
 		
 		actions
 	end

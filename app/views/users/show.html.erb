@@ -1,0 +1,21 @@
+<h1 class="client-name"><%= current_user.client_name %></h1>
+<br>
+<div class="container">
+	<div class="row">
+		<h2 class="second-heading">Your Financial Info</h2>
+		<br>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<div class="media">
+				<div class="media-body">
+					<% @user_links.each do |user_link| %>
+						<%= link_to "#{Date.today.year} Financial Overview", user_link.url, :target => '_blank' %>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
