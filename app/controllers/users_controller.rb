@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @users = User.all
+    @user_links = current_user.links
   end
 
   def update

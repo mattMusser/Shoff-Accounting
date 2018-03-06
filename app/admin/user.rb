@@ -7,6 +7,7 @@ ActiveAdmin.register User do
 		column :email
 		column :role
 		column :created_at
+		column :link
 		
 		actions
 	end
@@ -20,6 +21,7 @@ ActiveAdmin.register User do
 		f.inputs "User Details" do
 			f.input :client_name
 			f.input :email
+			f.input :links
 			f.input :password
 			f.input :password_confirmation
 		end

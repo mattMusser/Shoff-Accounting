@@ -1,6 +1,7 @@
 class LinkController < ApplicationController
   def show
     @sheet_link = Link.find(params[:id])
+    authorize @sheet_link
     redirect_to @sheet_link.url
   end
 
@@ -11,6 +12,7 @@ class LinkController < ApplicationController
   def create
     @sheet_link = Link.find(params[:id])
     @sheet = @sheet.build(link_params)
+    authorize @sheet
 
     if @sheet_link.save
       flash[:notice] = "Link was saved."
@@ -23,6 +25,7 @@ class LinkController < ApplicationController
 
   def edit
     @sheet_link = Link.find(params[:id])
+    authorize @sheet_link
   end
 
   def update
