@@ -1,5 +1,6 @@
 ActiveAdmin.register Link do
-	permit_params :url, :client_name
+	permit_params :url, :user_id
+	config.sort_order = 'user_id_dsc'
 
 	index do
 		selectable_column

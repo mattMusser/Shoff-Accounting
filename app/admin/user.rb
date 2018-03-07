@@ -1,10 +1,11 @@
 ActiveAdmin.register User do
-	permit_params :client_name, :email, :password, :password_confirmation, :url
+	permit_params :client_name, :email, :password, :password_confirmation
+	config.sort_order = 'client_name_asc'
 
 	index do
 		selectable_column
 		column :client_name
-		column :user_id
+		column :user_id, as: User.current_scope
 		column :email
 		column :role
 		column :created_at
