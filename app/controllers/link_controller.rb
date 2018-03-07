@@ -16,7 +16,7 @@ class LinkController < ApplicationController
 
     if @sheet_link.save
       flash[:notice] = "Link was saved."
-      redirect_to :show
+      redirect_to :root
     else
       flash.now[:alert] = "Something went wrong and your link wasn't saved. Please try again."
       render :new
@@ -34,7 +34,7 @@ class LinkController < ApplicationController
     @sheet_link.assign_attributes(link_params)
     if @sheet_link.save
       flash[:notice] = "Link was updated."
-      redirect_to show
+      redirect_to :root
     else
       flash.now[:alert] = "Something went wrong and the link wasn't saved. Please try again."
       render :edit

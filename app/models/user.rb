@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :links
+  has_many :urls
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :lockable, :validatable,

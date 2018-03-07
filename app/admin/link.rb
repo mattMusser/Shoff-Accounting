@@ -1,22 +1,23 @@
 ActiveAdmin.register Link do
-	permit_params :url, :email, :client_name
+	permit_params :url, :client_name
 
 	index do
 		selectable_column
-		column :client_name
+		column :user_id
 		column :url
 		column :created_at
 		
 		actions
 	end
 
-	filter :client_name
+	filter :user_id
 
 	form do |f|
 		f.inputs "Link Details" do
-			f.input :client_name, as: :select, collection: User.select(:client_name).uniq
+			f.input :user_id
 			f.input :url
 		end
+		f.actions
 	end
 
 end

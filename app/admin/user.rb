@@ -1,13 +1,13 @@
 ActiveAdmin.register User do
-	permit_params :client_name, :email, :password, :password_confirmation
+	permit_params :client_name, :email, :password, :password_confirmation, :url
 
 	index do
 		selectable_column
 		column :client_name
+		column :user_id
 		column :email
 		column :role
 		column :created_at
-		column :url
 		
 		actions
 	end
