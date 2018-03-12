@@ -12,7 +12,9 @@
 			<div class="media">
 				<div class="media-body">
 					<% @user_links.each do |user_link| %>
-						<%= link_to "#{Date.today.year} Financial Overview", user_link.url, :target => '_blank' %>
+						<ul>
+							<i class="fa fa fa-caret-right fa-fw" aria-hidden="true"></i><%= link_to "#{user_link.created_at.year} Financial Overview", user_link.url, :target => '_blank' %>
+						</ul>
 					<% end %>
 				</div>
 			</div>
