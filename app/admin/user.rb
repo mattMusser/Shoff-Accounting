@@ -5,7 +5,6 @@ ActiveAdmin.register User do
 	index do
 		selectable_column
 		column :client_name
-		column :user_id, as: User.current_scope
 		column :email
 		column :role
 		column :created_at

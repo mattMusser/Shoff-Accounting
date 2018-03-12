@@ -4,7 +4,7 @@ ActiveAdmin.register Link do
 
 	index do
 		selectable_column
-		column :user_id
+		column :client_name
 		column :url
 		column :created_at
 		
@@ -15,7 +15,7 @@ ActiveAdmin.register Link do
 
 	form do |f|
 		f.inputs "Link Details" do
-			f.input :user_id
+			f.input :client_name
 			f.input :url
 		end
 		f.actions
