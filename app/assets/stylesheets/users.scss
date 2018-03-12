@@ -6,3 +6,17 @@
 
 @import "font-awesome";
 
+.client-name, .financial-heading {
+	color: #23282F;
+	font-family: sans-serif;
+	text-decoration: underline;
+}
+
+.financial-heading {
+	text-decoration-style: dashed;
+}
+
+.sheet-link a {
+	color: #3081CA;
+	font-family: sans-serif;
+}

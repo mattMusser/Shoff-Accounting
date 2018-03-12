@@ -2,7 +2,7 @@
 <br>
 <div class="container">
 	<div class="row">
-		<h2 class="second-heading">Your Financial Info</h2>
+		<h2 class="financial-heading">Your Financial Info</h2>
 		<br>
 	</div>
 </div>
@@ -12,7 +12,7 @@
 			<div class="media">
 				<div class="media-body">
 					<% @user_links.each do |user_link| %>
-						<ul>
+						<ul class="sheet-link">
 							<i class="fa fa fa-caret-right fa-fw" aria-hidden="true"></i><%= link_to "#{user_link.created_at.year} Financial Overview", user_link.url, :target => '_blank' %>
 						</ul>
 					<% end %>
