@@ -1,16 +1,16 @@
 class SheetLinksController < ApplicationController
   def show
-    @sheet_link = Sheet_Link.find(params[:id])
+    @sheet_link = SheetLink.find(params[:id])
     authorize @sheet_link
     redirect_to @sheet_link.url
   end
 
   def new
-    @sheet_link = Sheet_Link.new
+    @sheet_link = SheetLink.new
   end
 
   def create
-    @sheet_link = Sheet_Link.find(params[:id])
+    @sheet_link = SheetLink.find(params[:id])
     @sheet = @sheet.build(link_params)
     authorize @sheet
 
@@ -24,12 +24,12 @@ class SheetLinksController < ApplicationController
   end
 
   def edit
-    @sheet_link = Sheet_Link.find(params[:id])
+    @sheet_link = SheetLink.find(params[:id])
     authorize @sheet_link
   end
 
   def update
-    @sheet_link = Sheet_Link.find(params[:id])
+    @sheet_link = SheetLink.find(params[:id])
 
     @sheet_link.assign_attributes(link_params)
     if @sheet_link.save
@@ -42,7 +42,7 @@ class SheetLinksController < ApplicationController
   end
 
   def destroy
-    @sheet_link = Sheet_Link.find(params[:id])
+    @sheet_link = SheetLink.find(params[:id])
 
     if @sheet_link.destroy
       flash[:notice] = "\"#{@sheel_link.url}\" was deleted successfully."

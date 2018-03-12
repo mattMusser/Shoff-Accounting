@@ -1,4 +1,4 @@
-ActiveAdmin.register SheetLinks do
+ActiveAdmin.register SheetLink do
 	permit_params :url, :client_name
 	config.sort_order = 'client_name_dsc'
 
