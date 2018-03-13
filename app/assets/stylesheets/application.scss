@@ -27,10 +27,12 @@
 .navbar a {
 	color: #428bca;
 	text-decoration-line: none;
+	text-shadow: 1px 1px 1px #000, 3px 3px 10px white;
 }
 
 .navbar a:hover {
 	color: #F7F9FB;
+	text-shadow: 1px 1px 1px #000, 3px 3px 5px #428bca;
 }
 
 .navbar .userStatus {
