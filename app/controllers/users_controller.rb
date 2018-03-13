@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
-  def index
-  end
+  before_action :authenticate_user!
 
   def show
     @user_links = current_user.links

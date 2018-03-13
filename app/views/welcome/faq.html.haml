@@ -1,2 +1,57 @@
-<h1>Welcome#faq</h1>
-<p>Find me in app/views/welcome/faq.html.erb</p>
+.heading
+	%h1.page-heading Fequently Asked Questions
+%body
+	%hr.divider
+	%br
+	-if !user_signed_in?
+		.question
+			%h4.question-heading
+				%b Where am I?
+			.answer
+				%p
+					This is the app used by clients of Shoff Accounting. If you aren't a client and have arrived here by mistake then click here to back to Shoff Accounting
+					%i.fa.fa-long-arrow-right{"aria-hidden" => "true"}
+					#{link_to 'Shoff Accounting', '#'}.
+		%br
+		.question
+			%h4.question-heading
+				%b How do I sign up and create an account?
+			.answer
+				%p Account creation is done by the admin and only if you are a client. If you are a new client then you should be expecting an email with your sign in credentials.
+		%br
+		.question
+			%h4.question-heading
+				%b What do I do if I've forgotten my password and have failed to receive password reset instructions?
+			.answer
+				%p
+					If you have failed to receive password instructions then you will have to cantact the admin explaining who you are and he will reset your password for you.
+	%br
+	.question
+		%h4.question-heading
+			%b Why do I keep getting signed out of my account?
+		.answer
+			%p For your security you will be signed out automatically if there hasn't been any activity for fifteen minutes.
+	%br
+	.question
+		%h4.question-heading
+			%b How do I delete my account if I don't want my financial information accessable through this app?
+		.answer
+			%p If you still are a client of Shoff Accounting and wish not to use this service then you can contact the admin reqesting to have to have your app account deleted.
+	%br
+	.question
+		%h4.question-heading
+			%b How do I contact the admin?
+		.answer
+			%p You can contact with this email: #{mail_to "admin@fakeemail.com"}.
+	%br
+	.question
+		%h4.question-heading
+			%b How do I conatact Shoff Accounting?
+		.answer
+			%p You can contact ShoffAccounting with this email: #{mail_to "shoffaccounting@fakeemail.com"}.
+	%br
+.footer
+	/footer partial for copyright
+
+	
+	

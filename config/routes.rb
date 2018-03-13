@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   get 'users', to: "users#index", as: "clients"
   get 'users/:id', to: "users#show", as: "client"
 
+  get 'faq' => 'welcome#faq'
   root 'users#show'
 end
