@@ -24,14 +24,13 @@ gem 'jquery-rails', '~> 4.3'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 # Used to access font-awesome fonts
 gem 'font-awesome-rails'
+# Used to theme Active Admin
 gem 'active_admin_theme'
 
 # Use Devise for Authentication
 gem 'devise', '~> 4.3'
 # User Faker to generate seed data
 gem 'faker', '~> 1.8'
-# Use figaro to store environment variables
-gem 'figaro', '~> 1.1'
 # Use HAML as alternative to ERB
 gem 'haml'
 # Use Pundit for authorization
@@ -40,9 +39,6 @@ gem 'pundit'
 gem 'bcrypt'
 # Use activeadmin for admin framework
 gem 'activeadmin', '~>1.2'
-
-# Use Recarpet for markdown
-gem 'redcarpet'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
