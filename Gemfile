@@ -48,12 +48,14 @@ group :development, :test do
   gem 'selenium-webdriver'
 end
 
-group :production, :development do
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3', '~> 1.3.13'
+group :production do
+  #Use pg as the production database for Active Record
+  gem 'pg', '~> 0.21.0'
 end
 
 group :development do
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3', '~> 1.3.13'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
