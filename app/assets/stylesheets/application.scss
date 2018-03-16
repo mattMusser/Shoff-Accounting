@@ -20,6 +20,9 @@
 @import "bootstrap";
 @import "font-awesome";
 
+$white-shadow: 1px 1px 1px #000, 1px 1px 5px white;
+$blue-shadow: 1px 1px 1px #000, 1px 1px 5px #428bca;
+
 .navbar {
 	background-color: #23282F;
 }
@@ -27,12 +30,12 @@
 .navbar a {
 	color: #428bca;
 	text-decoration-line: none;
-	text-shadow: 1px 1px 1px #000, 3px 3px 10px white;
+	text-shadow: $white-shadow;
 }
 
 .navbar a:hover {
 	color: #F7F9FB;
-	text-shadow: 1px 1px 1px #000, 3px 3px 5px #428bca;
+	text-shadow: $blue-shadow;
 }
 
 .navbar .userStatus {
