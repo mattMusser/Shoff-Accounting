@@ -1,24 +1,15 @@
-# README
+# Shoff Accounting Client App
+Shoff Accounting Client App was built for [Shoff Accounting](https://www.shoffaccounting.com/) so they could give their Clients easy access to links to their financial information.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Tech
+- Active Admin
+- Bootstrap 3
+- Devise
+- Ruby on Rails
+- Pundit
 
-Things you may want to cover:
+## Admin Dashboard
 
-* Ruby version
+I used Active Admin to build my client an Admin dashboard to give him client management tools. 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![Users](https://drive.google.com/file/d/1vpTTSNf0_yBcXzjzNP0Xr03BPdgD9uqy/view?usp=sharing)
