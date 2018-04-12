@@ -1,12 +1,21 @@
 # Shoff Accounting Client App
-Shoff Accounting Client App was built for [Shoff Accounting](https://www.shoffaccounting.com/) so they could give their Clients easy access to links to their financial information.
+Shoff Accounting Client App was built for [Shoff Accounting](https://www.shoffaccounting.com/) so they could create accounts for their clients and post links to their financial reports to their respective accounts, and give them easier access to their financial information.
 
-## Tech
-- Active Admin Gem
+## Features
+- An admin dashboard that gives the admin client management tools.
+- The admin can add, edit, and delete links to/from client accounts.
+- Clients can sign in to ther accounts to access the links to their finanical reports.
+
+## Built With
+- Ruby
+- Rails 5.1.4
 - Bootstrap 3
 - Devise
-- Ruby on Rails
+- Active Admin
+- ActiveAdminTheme (used to theme Active Admin)
 - Pundit
+- Bcrypt
+- Haml
 
 ## Admin Dashboard
 
@@ -36,5 +45,8 @@ Shoff Accounting needed a way to give their clients easy access to links to thei
 ![Add Link](https://github.com/mattMusser/Shoff-Accounting/blob/read-me/app/assets/images/admin-new-link.png?raw=true)
 
 When the admin needs to add link to client's account he can click the "New Link" button in the upper right corner to take him to the New LInk page. At the New LInk page he can add a link by selecting the client's user id number and then inputing the url to their respective spreadsheet.
+
+## Author
+[Matt Musser](www.mattmusser.com)
 
 
